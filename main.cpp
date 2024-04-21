@@ -1,58 +1,57 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <windows.h>
-#include <shlobj.h>
-
+#include "interfaz.cpp"
+#include "funciones.cpp"
+/*
+ * <|°_°|>
+*/
 using namespace std;
-filesystem::path Carpeta_padre = filesystem::current_path().parent_path();
-
-
-
-string seleccionarArchivo() {
-    OPENFILENAME ofn;
-    char fileName[MAX_PATH] = "";
-    ZeroMemory(&ofn, sizeof(ofn));
-    ofn.lStructSize = sizeof(OPENFILENAME);
-    ofn.hwndOwner = NULL;
-    ofn.lpstrFilter = "Todos los archivos\0*.*\0";
-    ofn.lpstrFile = fileName;
-    ofn.nMaxFile = MAX_PATH;
-    ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
-    ofn.lpstrDefExt = "";
-    if (GetOpenFileName(&ofn))
-        return fileName;
-    return "";
-}
-
-
-
-// funcion para seleccion de carpetas atraves de una interfaz
-string seleccionarCarpeta() {
-    BROWSEINFO bi = {0};
-    bi.lpszTitle = "Elige una carpeta:";
-    LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
-
-    if (pidl != 0) {
-        TCHAR path[MAX_PATH];
-        if (SHGetPathFromIDList(pidl, path)) {
-            return path;
-        }
-    }
-    return "";
-}
+string Ubicacion_Carpeta_User,Ubicacion_Archivo_User,texto_cifrado ,contenido, copia;
+char asdf;
+int opcion, clave = 3;
 
 int main() {
-    cout << Carpeta_padre << endl;
-
-    int opcion;
-
-    cout<<"selecciona una opcion 1- carpeta, 2- archivo\n"<<":";cin>>opcion;
-    if(opcion ==1){
-        string Ubicacion_Carpeta_User = seleccionarCarpeta();
-    }else{
-        string Ubicacion_Archivo_User = seleccionarArchivo();
+    cout << "selecciona una opcion 1- carpeta, 2- archivo\n" << ":";
+    cin >> opcion;
+    if (opcion == 1) {
+        Ubicacion_Carpeta_User = seleccionarCarpeta();
+    } else {
+        Ubicacion_Archivo_User = seleccionarArchivo();
     }
-    system("pause");
+
+    ifstream archivo(Ubicacion_Archivo_User);
+    if(archivo.is_open()){
+        cout<<"archivo entotrado"<<endl;
+        while(getline(archivo, contenido)){
+            copia += contenido;
+        }
+        archivo.close(); // Cierra el archivo después de leerlo
+
+        cout<<"quieres cifrar el documento S /N \n:";cin>>asdf;
+        if(asdf == 's' or asdf =='S'){
+            texto_cifrado = cifrar(copia, clave);
+
+            ofstream archivo_salida(Ubicacion_Archivo_User);
+            if (archivo_salida.is_open()) {
+                archivo_salida << texto_cifrado;
+                archivo_salida.close();
+                cout<<"cifrado con exito!";
+            }
+            cout<<"quieres descifrar el documento S /N \n:";cin>>asdf;
+            if(asdf == 's' or asdf =='S') {
+                string texto_descifrado = descifrar(texto_cifrado, clave);
+                ofstream archivo_salida(Ubicacion_Archivo_User);
+                if (archivo_salida.is_open()) {
+                    archivo_salida << texto_descifrado;
+                    archivo_salida.close();
+                    cout << "descifrado con exito!";
+                }
+            }
+        }
+    }else{
+        cout<<"no ta we"<<endl;
+    }
+
     return 0;
 }
