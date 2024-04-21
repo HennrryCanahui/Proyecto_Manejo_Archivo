@@ -1,0 +1,3 @@
+C:/Users/FACTURACION/Desktop/No abrir/Manejo de archivos/cmake-build-debug/CMakeFiles/Manejo_de_archivos.dir
+C:/Users/FACTURACION/Desktop/No abrir/Manejo de archivos/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/FACTURACION/Desktop/No abrir/Manejo de archivos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
