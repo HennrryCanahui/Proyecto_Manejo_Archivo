@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/FACTURACION/Desktop/No abrir/Manejo de archivos
+# Install script for directory: D:/Proyecto_Manejo_Archivo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/FACTURACION/Desktop/No abrir/Manejo de archivos/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Proyecto_Manejo_Archivo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -37,3 +37,21 @@ string seleccionarCarpeta() {
     }
     return "";
 }
+
+// menu
+void mostrarMenu() {
+    cout << "\n===========================================================\n";
+    cout << "                  MENU DE OPCIONES         \n";
+    cout << "===========================================================\n";
+    cout << "  1. Cifrar archivo                  ";
+    cout << "  2. Descifrar archivo\n";
+    cout << "  3. Editar archivo                  ";
+    cout << "  4. Eliminar archivo\n";
+    cout << "  5. Opcion 5                        ";
+    cout << "  6. Opcion 6\n";
+    cout << "  7. Opcion 7                        ";
+    cout << "  8. Opcion 8\n";
+    cout << "  9. Salir\n";
+    cout << "===========================================================\n";
+    cout << "  Por favor, seleccione una opcion: ";
+}

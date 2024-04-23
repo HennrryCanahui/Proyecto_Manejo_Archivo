@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Manejo_de_archivos.exe"
+			"path" : "Proyecto_Manejo_Archivo.exe"
 		},
 		{
-			"path" : "Manejo_de_archivos.pdb"
+			"path" : "Proyecto_Manejo_Archivo.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "Manejo_de_archivos::@6890427a1f51a3e7e1df",
+	"id" : "Proyecto_Manejo_Archivo::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Manejo_de_archivos",
-	"nameOnDisk" : "Manejo_de_archivos.exe",
+	"name" : "Proyecto_Manejo_Archivo",
+	"nameOnDisk" : "Proyecto_Manejo_Archivo.exe",
 	"paths" : 
 	{
 		"build" : ".",

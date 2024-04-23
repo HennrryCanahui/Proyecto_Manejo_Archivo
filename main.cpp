@@ -1,57 +1,84 @@
 #include <iostream>
 #include <fstream>
-#include <filesystem>
 #include "interfaz.cpp"
 #include "funciones.cpp"
 /*
  * <|°_°|>
 */
 using namespace std;
-string Ubicacion_Carpeta_User,Ubicacion_Archivo_User,texto_cifrado ,contenido, copia;
-char asdf;
-int opcion, clave = 3;
+
+string Ubicacion_Carpeta_User,Ubicacion_Archivo_User;
+
+char R_cifrado, R_descifrado,opcion, opcion_caso_uno;
+int clave = 3;
 
 int main() {
-    cout << "selecciona una opcion 1- carpeta, 2- archivo\n" << ":";
-    cin >> opcion;
-    if (opcion == 1) {
-        Ubicacion_Carpeta_User = seleccionarCarpeta();
-    } else {
-        Ubicacion_Archivo_User = seleccionarArchivo();
-    }
-
-    ifstream archivo(Ubicacion_Archivo_User);
-    if(archivo.is_open()){
-        cout<<"archivo entotrado"<<endl;
-        while(getline(archivo, contenido)){
-            copia += contenido;
-        }
-        archivo.close(); // Cierra el archivo después de leerlo
-
-        cout<<"quieres cifrar el documento S /N \n:";cin>>asdf;
-        if(asdf == 's' or asdf =='S'){
-            texto_cifrado = cifrar(copia, clave);
-
-            ofstream archivo_salida(Ubicacion_Archivo_User);
-            if (archivo_salida.is_open()) {
-                archivo_salida << texto_cifrado;
-                archivo_salida.close();
-                cout<<"cifrado con exito!";
+    do{
+        mostrarMenu();
+        cin >> opcion;
+        switch (opcion) {
+            case '1': {
+                Ubicacion_Archivo_User = seleccionarArchivo();
+                contenido = Leer_contenido(Ubicacion_Archivo_User);
+                string texto_cifrado = cifrar(contenido, clave);
+                Modificar_Documento(Ubicacion_Archivo_User, texto_cifrado);
+                cout<<"Documento cifrado\n";
+                break;
             }
-            cout<<"quieres descifrar el documento S /N \n:";cin>>asdf;
-            if(asdf == 's' or asdf =='S') {
-                string texto_descifrado = descifrar(texto_cifrado, clave);
-                ofstream archivo_salida(Ubicacion_Archivo_User);
-                if (archivo_salida.is_open()) {
-                    archivo_salida << texto_descifrado;
-                    archivo_salida.close();
-                    cout << "descifrado con exito!";
-                }
+            case '2': {
+                Ubicacion_Archivo_User = seleccionarArchivo();
+                contenido = Leer_contenido(Ubicacion_Archivo_User);
+                string texto_descifrado = descifrar(contenido, clave);
+                Modificar_Documento(Ubicacion_Archivo_User, texto_descifrado);
+                cout<<"Documento descifrado\n";
+                break;
             }
+
+            case '3':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 3 seleccionado\n";
+                break;
+            }
+            case '4':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 4 seleccionado\n";
+                break;
+            }
+            case '5':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 5 seleccionado\n";
+                break;
+            }
+            case '6':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 6 seleccionado\n";
+                break;
+            }
+            case '7':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 7 seleccionado\n";
+                break;
+            }
+            case '8':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 8 seleccionado\n";
+                break;
+            }
+            case '9':{
+                // Implementa la funcionalidad aquí
+                cout << "opcion 9 seleccionado\n";
+                break;
+            }
+            default:
+                cout << "--------------------------------------------------------\n";
+                cout << "             Opcion invalida. Intente de nuevo.\n";
+                cout << "---------------------------------------------------------\n";
+                system("pause");
         }
-    }else{
-        cout<<"no ta we"<<endl;
-    }
+
+    }while(opcion <= '0');
+
+
 
     return 0;
 }
