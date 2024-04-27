@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include "interfaz.cpp"
@@ -35,38 +36,122 @@ int main() {
             }
 
             case '3':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 3 seleccionado\n";
+                /*
+                inicializarNcurses();
+
+                std::string ruta = obtenerCadenaDeVentanaEmergente(5, 50, 10, 10, "Introduce la ruta del archivo:");
+                std::string palabra = obtenerCadenaDeVentanaEmergente(5, 50, 17, 10, "Introduce la palabra clave:");
+
+                try {
+                    std::ifstream archivo = abrirArchivo(ruta);
+                    std::vector<std::string> lineasEncontradas = buscarPalabraEnArchivo(archivo, palabra);
+
+                    for (const auto& linea : lineasEncontradas) {
+                        std::cout << linea << std::endl;
+                    }
+                } catch (const std::exception& e) {
+                    std::cerr << e.what() << std::endl;
+                }
+
+                endwin();
+                */
                 break;
             }
             case '4':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 4 seleccionado\n";
+                jugarAdivinanzaDePalabras();
+                mostrarPalabrasGuardadas("D:\\Proyecto_Manejo_Archivo\\palabras.txt");
                 break;
             }
             case '5':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 5 seleccionado\n";
+                try {
+                    std::string folderPath = obtenerRutaCarpeta();
+
+                    if (!verificarCarpeta(folderPath)) {
+                        std::cerr << "La carpeta especificada no existe o no es válida." << std::endl;
+                        return 1;
+                    }
+
+                    auto [fileCount, totalSize] = recorrerArchivos(folderPath);
+
+                    std::cout << "Cantidad de archivos en la carpeta: " << fileCount << std::endl;
+                    std::cout << "Tamaño total de los archivos: " << totalSize << " bytes" << std::endl;
+                } catch (const std::exception& e) {
+                    std::cerr << "Error al procesar la carpeta: " << e.what() << std::endl;
+                    return 1;
+                }
                 break;
             }
             case '6':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 6 seleccionado\n";
+                string Ubicacion_Archivo_User;
+
+
+                Ubicacion_Archivo_User = seleccionarArchivo();
+
+                ifstream file(Ubicacion_Archivo_User);
+                cout<<"file is: "<< Ubicacion_Archivo_User;
+                if (!file) {
+                    std::cerr << "El archivo no existe en el escritorio." << endl;
+                    return 1;
+                }
+
+                // Obtener y mostrar el tamaño del archivo
+                long fileSize = getFileSize(Ubicacion_Archivo_User);
+                cout << "Tamaño del archivo: " << fileSize << " bytes" << endl;
+
+                // Obtener y mostrar la fecha de última modificación
+                string lastModified = getLastModifiedTime(Ubicacion_Archivo_User);
+                cout << "Última modificación: " << lastModified;
                 break;
             }
             case '7':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 7 seleccionado\n";
+                std::string ubicacionArchivo;
+                ubicacionArchivo = seleccionarArchivo();
+                std::string contenido = leerContenido(ubicacionArchivo);
+
+                int numeroAleatorio1 = generarNumeroAleatorio();
+                int numeroAleatorio2 = generarNumeroAleatorio();
+                std::cout << "¿Cual es la suma de " << numeroAleatorio1 << " y " << numeroAleatorio2 << "?\n";
+
+                int respuesta;
+                std::cout << "Introduce tu respuesta: ";
+                std::cin >> respuesta;
+
+                if (respuesta == numeroAleatorio1 + numeroAleatorio2) {
+                    std::cout << "¡Has ganado! Tu archivo se mantiene igual." << std::endl;
+                } else {
+                    std::cout << "Has perdido. Tu archivo será cifrado." << std::endl;
+                    std::string contenidoCifrado = cifrar(contenido, numeroAleatorio1 + numeroAleatorio2);
+                    escribirContenido(ubicacionArchivo, contenidoCifrado);
+                }
+
                 break;
             }
             case '8':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 8 seleccionado\n";
-                break;
-            }
-            case '9':{
-                // Implementa la funcionalidad aquí
-                cout << "opcion 9 seleccionado\n";
+                // abrir la funcion en la otra carpeta
+                /*
+                cout << "\n\n\n-------------------------------------------------------------------";
+                cout << "\n          Comprension y Descompresion con el Metodo de Huffman";
+                cout << "\n                                 Programacion I";
+                cout << "\n-----------------------------------------------------------------------";
+                string text;
+                cout << "\nIngrese el mensaje que desea comprimir: ";
+                getline(cin, text);
+
+                //Guarda la entrada del usuario en un archivo de texto
+                ofstream outputFile("mensaje_del_usuario.txt");
+                if(outputFile.is_open()){
+                    outputFile << text;
+                    outputFile.close();
+                    cout << "\nEl mensaje se ha guardado en el archivo 'mensaje_del_usuario.txt'.\n";
+                }else{
+                    cout <<" \nErro al guardar el archivo.\n";
+                }
+                crearArbol(text);
+                cout << "\n";
+
+
+
+                 */
                 break;
             }
             default:
@@ -77,8 +162,5 @@ int main() {
         }
 
     }while(opcion <= '0');
-
-
-
     return 0;
 }

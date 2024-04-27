@@ -22,7 +22,7 @@ string seleccionarArchivo() {
 }
 
 
-
+/*
 // funcion para seleccion de carpetas atraves de una interfaz
 string seleccionarCarpeta() {
     BROWSEINFO bi = {0};
@@ -37,6 +37,7 @@ string seleccionarCarpeta() {
     }
     return "";
 }
+*/
 
 // menu
 void mostrarMenu() {
@@ -45,12 +46,12 @@ void mostrarMenu() {
     cout << "===========================================================\n";
     cout << "  1. Cifrar archivo                  ";
     cout << "  2. Descifrar archivo\n";
-    cout << "  3. Editar archivo                  ";
-    cout << "  4. Eliminar archivo\n";
-    cout << "  5. Opcion 5                        ";
-    cout << "  6. Opcion 6\n";
-    cout << "  7. Opcion 7                        ";
-    cout << "  8. Opcion 8\n";
+    cout << "  3. Lester f(2)                 ";
+    cout << "  4. Juego de palabras\n";
+    cout << "  5. Lester f(1)        ";
+    cout << "  6. info de capetas\n";
+    cout << "  7. Game                   ";
+    cout << "  8. Codificacion binario\n";
     cout << "  9. Salir\n";
     cout << "===========================================================\n";
     cout << "  Por favor, seleccione una opcion: ";

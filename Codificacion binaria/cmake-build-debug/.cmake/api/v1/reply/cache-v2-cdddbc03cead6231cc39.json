@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Proyecto_Manejo_Archivo/cmake-build-debug"
+			"value" : "c:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Proyecto_Manejo_Archivo/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Proyecto_Manejo_Archivo"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Manejo_de_archivos"
+			"value" : "C:/Program Files (x86)/tarea_para_el_sabado"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Manejo_de_archivos"
+			"value" : "tarea_para_el_sabado"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,7 +1270,19 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Manejo_de_archivos_BINARY_DIR",
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "tarea_para_el_sabado_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1279,10 +1291,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Proyecto_Manejo_Archivo/cmake-build-debug"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug"
 		},
 		{
-			"name" : "Manejo_de_archivos_IS_TOP_LEVEL",
+			"name" : "tarea_para_el_sabado_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1294,7 +1306,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Manejo_de_archivos_SOURCE_DIR",
+			"name" : "tarea_para_el_sabado_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1303,19 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Proyecto_Manejo_Archivo"
-		},
-		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk"
 		}
 	],
 	"kind" : "cache",
