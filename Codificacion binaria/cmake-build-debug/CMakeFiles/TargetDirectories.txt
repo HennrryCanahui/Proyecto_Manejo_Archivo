@@ -1,3 +1,0 @@
-C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug/CMakeFiles/tarea_para_el_sabado.dir
-C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug/CMakeFiles/rebuild_cache.dir

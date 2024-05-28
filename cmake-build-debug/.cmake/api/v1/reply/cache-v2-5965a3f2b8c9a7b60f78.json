@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug"
+			"value" : "c:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/tarea_para_el_sabado"
+			"value" : "C:/Program Files (x86)/Manejo_de_archivos"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "tarea_para_el_sabado"
+			"value" : "Manejo_de_archivos"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,19 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "tarea_para_el_sabado_BINARY_DIR",
+			"name" : "Manejo_de_archivos_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1291,10 +1279,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk/cmake-build-debug"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)/cmake-build-debug"
 		},
 		{
-			"name" : "tarea_para_el_sabado_IS_TOP_LEVEL",
+			"name" : "Manejo_de_archivos_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1306,7 +1294,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "tarea_para_el_sabado_SOURCE_DIR",
+			"name" : "Manejo_de_archivos_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1315,7 +1303,19 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hennr/OneDrive/Escritorio/esrdtfyguhijk"
+			"value" : "C:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",

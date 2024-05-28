@@ -1,16 +1,15 @@
 #include <iostream>
 #include <windows.h>
-#include <shlobj.h>
 using namespace std;
 
 
-// funcion para seleccionar un archivo atraves de una interfaz
+// function para seleccionar un archivo a través de una interfaz
 string seleccionarArchivo() {
     OPENFILENAME ofn;
     char fileName[MAX_PATH] = "";
     ZeroMemory(&ofn, sizeof(ofn));
     ofn.lStructSize = sizeof(OPENFILENAME);
-    ofn.hwndOwner = NULL;
+    ofn.hwndOwner = nullptr;
     ofn.lpstrFilter = "Todos los archivos\0*.*\0";
     ofn.lpstrFile = fileName;
     ofn.nMaxFile = MAX_PATH;
@@ -22,22 +21,6 @@ string seleccionarArchivo() {
 }
 
 
-/*
-// funcion para seleccion de carpetas atraves de una interfaz
-string seleccionarCarpeta() {
-    BROWSEINFO bi = {0};
-    bi.lpszTitle = "Elige una carpeta:";
-    LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
-
-    if (pidl != 0) {
-        TCHAR path[MAX_PATH];
-        if (SHGetPathFromIDList(pidl, path)) {
-            return path;
-        }
-    }
-    return "";
-}
-*/
 
 // menu
 void mostrarMenu() {
@@ -51,7 +34,7 @@ void mostrarMenu() {
     cout << "  5. Lester f(1)        ";
     cout << "  6. info de capetas\n";
     cout << "  7. Game                   ";
-    cout << "  8. Codificacion binario\n";
+    cout << "  8. Codification binario\n";
     cout << "  9. Salir\n";
     cout << "===========================================================\n";
     cout << "  Por favor, seleccione una opcion: ";
