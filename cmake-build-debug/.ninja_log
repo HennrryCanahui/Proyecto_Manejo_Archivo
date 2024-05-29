@@ -1,11 +1,8 @@
 # ninja log v5
-5290	5580	7359234240000000	Proyecto_Manejo_Archivo.exe	4ac25f8f9404dcf3
-3217	3406	7355249080000000	Manejo_de_archivos.exe	1d5f8a0b6a783733
-6	5288	7359234240000000	CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj	ea937df921a01ad5
-3	646	7386104458624328	build.ninja	6f3c72cba4e134d2
-6	5588	7386105697900168	CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj	c9113e1dee50a590
-5589	5952	7386105701513892	Proyecto_Manejo_Archivo.exe	4ac25f8f9404dcf3
-7	4599	7386118687923317	CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj	c9113e1dee50a590
-4600	5001	7386118691911831	Proyecto_Manejo_Archivo.exe	4ac25f8f9404dcf3
-6	3059	7386122118730172	CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj	c9113e1dee50a590
 3060	3214	7386122120263224	Proyecto_Manejo_Archivo.exe	4ac25f8f9404dcf3
+3217	3406	7355249080000000	Manejo_de_archivos.exe	1d5f8a0b6a783733
+11	6171	7386193818169126	CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj	c9113e1dee50a590
+2	510	7387026235896419	build.ninja	222fe1fc0a5d34cb
+23	3215	7386193788582401	CMakeFiles/Proyecto_Manejo_Archivo.dir/funciones.cpp.obj	d08e6db7aa17125e
+2	337	7387026235896419	build.ninja	222fe1fc0a5d34cb
+8	243	7387026239799373	Proyecto_Manejo_Archivo.exe	4ac25f8f9404dcf3

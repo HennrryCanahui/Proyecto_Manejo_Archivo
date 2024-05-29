@@ -21,85 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="890d1b52-1037-472c-8ea8-5f5b64593fc5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/.idea/tarea para el sabado.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/archivos.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/archivos.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/archivos2.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/archivos2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/cache-v2-cdddbc03cead6231cc39.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-aa5eeaf032ef2e62892f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0535fc6c1bfab97cbd0e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-27T11-21-20-0167.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/target-tarea_para_el_sabado-Debug-89da78d9342cd258734d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-56d7836a41eebfa66f77.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/tarea_para_el_sabado.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/cmake-build-debug/tareas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/comprension.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/comprension.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/comprension.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codificacion binaria/mensaje_del_usuario.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-ca78c74aeaa6f4cd50c6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-0119a71d9c50af847c5e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-479d4d4308be68016867.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-27T11-04-52-0132.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-f1b2b3b9642b509dfa7c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-23fab35abd15fe976826.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-44effd3f88c23079db32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-28T14-40-46-0019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Proyecto_Manejo_Archivo-Debug-8cf110425a7bc9a70557.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_Manejo_Archivo.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_Manejo_Archivo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_Manejo_Archivo.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_Manejo_Archivo.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comprension.h" beforeDir="false" afterPath="$PROJECT_DIR$/comprension.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/funciones.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +76,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Proyecto_Manejo_Archivo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hennr/OneDrive/Escritorio/Nueva carpeta (3)/CMakeLists.txt&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -184,6 +118,9 @@
       <workItem from="1714165957713" duration="741000" />
       <workItem from="1714183229980" duration="4791000" />
       <workItem from="1714217072734" duration="1868000" />
+      <workItem from="1716916118151" duration="113000" />
+      <workItem from="1716916256637" duration="614000" />
+      <workItem from="1716999149200" duration="133000" />
     </task>
     <servers />
   </component>
