@@ -41,7 +41,6 @@ int main() {
             }
             case '4': {
                 jugarAdivinanzaDePalabras();
-                mostrarPalabrasGuardadas("D:\\Proyecto_Manejo_Archivo\\palabras.txt");
                 break;
             }
             case '5': {

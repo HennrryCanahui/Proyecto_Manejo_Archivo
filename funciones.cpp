@@ -11,6 +11,7 @@
 #include "comprension.h"
 using namespace std;
 namespace fs = std::filesystem;
+const string RUTA_ARCHIVO = "C:\\Users\\hennr\\OneDrive\\Escritorio\\Nueva carpeta (3)\\palabras.txt";
 
 // Función para cifrar el texto
 string cifrar(const string& texto, int clave) {
@@ -79,59 +80,39 @@ vector<string> leerPalabrasDesdeArchivo(const string& rutaArchivo) {
     return palabras;
 }
 
-// Función para guardar la palabra en el archivo
-void guardarPalabraEnArchivo(const string& palabra, const string& rutaArchivo) {
-    ofstream archivo(rutaArchivo, ios::app);
-    if (archivo.is_open()) {
-        archivo << palabra << endl;
-        archivo.close();
-    } else {
-        cerr << "No se pudo abrir el archivo para escribir." << endl;
-    }
-}
-
-// Función para mostrar todas las palabras del archivo
-void mostrarPalabrasGuardadas(const string& rutaArchivo) {
-    vector<string> palabras = leerPalabrasDesdeArchivo(rutaArchivo);
-    cout << "Palabras guardadas en el archivo:" << endl;
-    for (const auto& palabra : palabras) {
-        cout << palabra << endl;
-    }
-}
-
 // Función para proporcionar pistas al jugador
 void proporcionarPista(string& palabraAdivinada, const string& palabraSecreta, int& intentos, int& pistasDisponibles) {
     if (pistasDisponibles > 0) {
-        cout << "Pista: ";
         for (size_t i = 0; i < palabraSecreta.length(); ++i) {
             if (palabraAdivinada[i] == '_') {
                 palabraAdivinada[i] = palabraSecreta[i];
-                --intentos;
                 --pistasDisponibles;
-                cout << "Una letra de la palabra es '" << palabraSecreta[i] << "'." << endl;
+                cout << "Pista: Una letra de la palabra es '" << palabraSecreta[i] << "'." << endl;
                 break;
             }
         }
     } else {
-        cout << "No tienes más pistas disponibles." << endl;
+        cout << "No tienes mas pistas disponibles." << endl;
     }
 }
 
 // Función principal del juego
 void jugarAdivinanzaDePalabras() {
-    string rutaArchivo = "C:\\Users\\gesle\\Desktop\\palabras.txt";
-    string palabraJugador1;
-    cout << "Jugador 1, ingresa una palabra: ";
-    cin >> palabraJugador1;
-    guardarPalabraEnArchivo(palabraJugador1, rutaArchivo);
+    vector<string> palabras = leerPalabrasDesdeArchivo(RUTA_ARCHIVO);
 
-    vector<string> palabras = leerPalabrasDesdeArchivo(rutaArchivo);
-    string palabraSecreta = palabraJugador1;
+    if (palabras.empty()) {
+        cout << "No hay palabras disponibles para adivinar." << endl;
+        return;
+    }
+
+    srand(time(0));
+    string palabraSecreta = palabras[rand() % palabras.size()];
     string palabraAdivinada(palabraSecreta.length(), '_');
 
     int intentos = palabraSecreta.length();
-    int pistasDisponibles = (palabraSecreta.length() > 7) ? 3 : (palabraSecreta.length() > 3) ? 2 : 0;
+    int pistasDisponibles = (palabraSecreta.length() < 4) ? 2 : (palabraSecreta.length() <= 6) ? 4 : 6;
     bool adivinado = false;
+    int puntos = 0;
 
     cout << "Bienvenido al juego de adivina la palabra" << endl;
     cout << "Tienes " << intentos << " intentos para adivinar la palabra." << endl;
@@ -139,11 +120,14 @@ void jugarAdivinanzaDePalabras() {
 
     while (intentos > 0 && !adivinado) {
         cout << "Palabra adivinada: " << palabraAdivinada << endl;
-        cout << "Te quedan " << intentos << " intentos. Escribe 'P' para una pista." << endl;
+        cout << "Te quedan " << intentos << " intentos y " << pistasDisponibles << " pistas." << endl;
+        cout << "Escribe una letra o 'P' para una pista: ";
         string entrada;
         cin >> entrada;
+
         if (entrada == "P") {
             proporcionarPista(palabraAdivinada, palabraSecreta, intentos, pistasDisponibles);
+            puntos -= 1; // Restar puntos por usar una pista
         } else {
             char letra = entrada[0];
             bool letraEncontrada = false;
@@ -151,11 +135,13 @@ void jugarAdivinanzaDePalabras() {
                 if (palabraSecreta[i] == letra && palabraAdivinada[i] == '_') {
                     palabraAdivinada[i] = letra;
                     letraEncontrada = true;
+                    puntos += 2; // Sumar puntos por adivinar una letra
                 }
             }
             if (!letraEncontrada) {
                 --intentos;
                 cout << "Incorrecto. Te quedan " << intentos << " intentos." << endl;
+                puntos -= 1; // Restar puntos por intento fallido
             } else {
                 cout << "Correcto!" << endl;
             }
@@ -164,10 +150,13 @@ void jugarAdivinanzaDePalabras() {
     }
 
     if (adivinado) {
-        cout << "Felicidades, Jugador 2 adivinaste la palabra: " << palabraSecreta << endl;
+        cout << "Felicidades, adivinaste la palabra: " << palabraSecreta << endl;
+        puntos += 10; // Sumar puntos por adivinar la palabra completa
     } else {
-        cout << "Lo siento, Jugador 2 no adivinaste la palabra. Era: " << palabraSecreta << endl;
+        cout << "Lo siento, no adivinaste la palabra. Era: " << palabraSecreta << endl;
     }
+
+    cout << "Tu puntuacion final es: " << puntos << endl;
 }
 
 // Función para obtener la ruta de la carpeta del usuario
