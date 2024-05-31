@@ -36,16 +36,20 @@ int main() {
                 break;
             }
             case '3': {
-                // función de jr
+                leerYTraducirArchivoABinario();
+
                 break;
             }
             case '4': {
+
+                string rutaArchivo = seleccionarArchivo();
+                traducirArchivoBinarioATexto(rutaArchivo);
                 jugarAdivinanzaDePalabras();
                 break;
             }
             case '5': {
                 try {
-                    string folderPath = obtenerRutaCarpeta();
+                    string folderPath = seleccionarCarpeta();
 
                     if (!verificarCarpeta(folderPath)) {
                         cerr << "La carpeta especificada no existe o no es válida." << endl;
@@ -55,7 +59,7 @@ int main() {
                     auto [fileCount, totalSize] = recorrerArchivos(folderPath);
 
                     cout << "Cantidad de archivos en la carpeta: " << fileCount << endl;
-                    cout << "Tamaño total de los archivos: " << totalSize << " bytes" << endl;
+                    cout << "Peso total de los archivos: " << totalSize << " bytes" << endl;
                 } catch (const exception& e) {
                     cerr << "Error al procesar la carpeta: " << e.what() << endl;
                     return 1;
@@ -74,11 +78,11 @@ int main() {
 
                 // Obtener y mostrar el tamaño del archivo
                 long fileSize = getFileSize(ubicacionArchivoUser);
-                cout << "Tamaño del archivo: " << fileSize << " bytes" << endl;
+                cout << "Peso del archivo: " << fileSize << " bytes" << endl;
 
                 // Obtener y mostrar la fecha de última modificación
                 string lastModified = getLastModifiedTime(ubicacionArchivoUser);
-                cout << "Última modificación: " << lastModified;
+                cout << "Ultima modificación: " << lastModified;
                 break;
             }
             case '7': {
@@ -94,7 +98,7 @@ int main() {
                 cin >> respuesta;
 
                 if (respuesta == numeroAleatorio1 + numeroAleatorio2) {
-                    cout << "¡Has ganado! Tu archivo se mantiene igual." << endl;
+                    cout << "Has ganado! Tu archivo se mantiene igual." << endl;
                 } else {
                     cout << "Has perdido. Tu archivo será cifrado." << endl;
                     string contenidoCifrado = cifrar(contenido, numeroAleatorio1 + numeroAleatorio2);
@@ -104,7 +108,8 @@ int main() {
                 break;
             }
             case '8': {
-                // función de jr
+
+                jugarAdivinanzaDePalabras();
                 break;
             }
             default: {

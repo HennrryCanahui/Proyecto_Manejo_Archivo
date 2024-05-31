@@ -1,9 +1,11 @@
 #include <iostream>
 #include <windows.h>
+#include <shlobj.h>
+#include <string>
 using namespace std;
 
 
-// function para seleccionar un archivo a través de una interfaz
+// Función para seleccionar un archivo a través de una interfaz
 string seleccionarArchivo() {
     OPENFILENAME ofn;
     char fileName[MAX_PATH] = "";
@@ -22,6 +24,35 @@ string seleccionarArchivo() {
 
 
 
+
+
+string seleccionarCarpeta(HWND hwndOwner = nullptr) {
+    BROWSEINFO bi;
+    ZeroMemory(&bi, sizeof(bi));
+    char buffer[MAX_PATH];
+
+    bi.hwndOwner = hwndOwner;
+    bi.pidlRoot = NULL;
+    bi.pszDisplayName = buffer;
+    bi.lpszTitle = "Seleccione una carpeta";
+    bi.ulFlags = BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE;
+    bi.lpfn = NULL;
+    bi.lParam = 0;
+    bi.iImage = 0;
+
+    LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
+    if (pidl != NULL) {
+        if (SHGetPathFromIDList(pidl, buffer)) {
+            string folderPath(buffer);
+            CoTaskMemFree(pidl); // Liberar memoria asignada para pidl
+            return folderPath;
+        }
+        CoTaskMemFree(pidl); // Liberar memoria asignada para pidl en caso de fallo
+    }
+    return "";
+}
+
+
 // menu
 void mostrarMenu() {
     cout << "\n===========================================================\n";
@@ -29,12 +60,12 @@ void mostrarMenu() {
     cout << "===========================================================\n";
     cout << "  1. Cifrar archivo                  ";
     cout << "  2. Descifrar archivo\n";
-    cout << "  3. Lester f(2)                 ";
-    cout << "  4. Juego de palabras\n";
-    cout << "  5. Lester f(1)        ";
-    cout << "  6. info de capetas\n";
-    cout << "  7. Game                   ";
-    cout << "  8. Codification binario\n";
+    cout << "  3. Traductor binario               ";
+    cout << "  4. Traductor binario a texto\n";
+    cout << "  5. Info carpeta                    ";
+    cout << "  6. Info ultima modificacion\n";
+    cout << "  7. Game                            ";
+    cout << "  8. Juego de palabras\n";
     cout << "  9. Salir\n";
     cout << "===========================================================\n";
     cout << "  Por favor, seleccione una opcion: ";

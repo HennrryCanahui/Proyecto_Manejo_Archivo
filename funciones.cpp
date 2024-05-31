@@ -8,10 +8,12 @@
 #include <unordered_map>
 #include <filesystem>
 #include <sys/stat.h>
-#include "comprension.h"
+#include <bitset>
 using namespace std;
 namespace fs = std::filesystem;
 const string RUTA_ARCHIVO = "C:\\Users\\hennr\\OneDrive\\Escritorio\\Nueva carpeta (3)\\palabras.txt";
+
+string seleccionarArchivo();
 
 // Función para cifrar el texto
 string cifrar(const string& texto, int clave) {
@@ -197,4 +199,112 @@ string getLastModifiedTime(const string& filePath) {
     struct stat attr;
     stat(filePath.c_str(), &attr);
     return ctime(&attr.st_mtime);
+}
+
+
+
+// funcion de texto binario
+
+void leerYTraducirArchivoABinario() {
+    string nombreArchivo = seleccionarArchivo();
+
+    if (nombreArchivo.empty()) {
+        cerr << "No se seleccionó ningún archivo." << endl;
+        return;
+    }
+
+    // Abrir el archivo original en modo lectura binaria
+    ifstream archivoEntrada(nombreArchivo, ios::binary);
+    if (!archivoEntrada) {
+        cerr << "Error al abrir el archivo " << nombreArchivo << endl;
+        return;
+    }
+
+    // Leer el contenido del archivo
+    string contenido((istreambuf_iterator<char>(archivoEntrada)), istreambuf_iterator<char>());
+    archivoEntrada.close();
+
+    // Crear el nombre del nuevo archivo
+    size_t posicionPunto = nombreArchivo.find_last_of(".");
+    string nombreArchivoBinario;
+    if (posicionPunto == string::npos) {
+        nombreArchivoBinario = nombreArchivo + "_traduccion_binario.txt";
+    } else {
+        nombreArchivoBinario = nombreArchivo.substr(0, posicionPunto) + "_traduccion_binario.txt";
+    }
+
+    // Abrir el nuevo archivo en modo escritura
+    ofstream archivoSalida(nombreArchivoBinario);
+    if (!archivoSalida) {
+        cerr << "Error al crear el archivo " << nombreArchivoBinario << endl;
+        return;
+    }
+
+    // Convertir el contenido a binario y escribirlo en el nuevo archivo
+    for (char c : contenido) {
+        bitset<8> bits(c);
+        archivoSalida << bits << ' '; // Agregar un espacio después de cada 8 bits
+    }
+
+    archivoSalida.close();
+    cout << "La traduccion a binario ha sido guardada en " << nombreArchivoBinario << endl;
+}
+
+// Funcion para traducir binario a texto
+
+string binarioATexto(const string& binario) {
+    stringstream textoStream;
+    string byte;
+    for (size_t i = 0; i < binario.length(); i += 9) { // 8 bits + 1 espacio
+        byte = binario.substr(i, 8);
+        if (byte.length() == 8) {
+            try {
+                char letra = static_cast<char>(bitset<8>(byte).to_ulong());
+                textoStream << letra;
+            } catch (const invalid_argument& e) {
+                cerr << "Cadena binaria inválida: " << byte << endl;
+                return "";
+            }
+        }
+    }
+    return textoStream.str();
+}
+
+// Función para traducir el archivo de binario a texto y guardar en un nuevo archivo
+void traducirArchivoBinarioATexto(const string& rutaArchivo) {
+    // Leer el contenido del archivo original
+    ifstream archivoBinario(rutaArchivo);
+    if (!archivoBinario.is_open()) {
+        cerr << "No se pudo abrir el archivo: " << rutaArchivo << endl;
+        return;
+    }
+
+    stringstream buffer;
+    buffer << archivoBinario.rdbuf();
+    string contenidoBinario = buffer.str();
+    archivoBinario.close();
+
+    // Convertir el contenido binario a texto
+    string textoTraducido = binarioATexto(contenidoBinario);
+
+    if (textoTraducido.empty()) {
+        cerr << "No se pudo traducir el archivo binario a texto." << endl;
+        return;
+    }
+
+    // Generar el nombre del nuevo archivo
+    size_t puntoPos = rutaArchivo.find_last_of('.');
+    string nombreArchivoNuevo = rutaArchivo.substr(0, puntoPos) + "_traducido_a_texto.txt";
+
+    // Guardar el texto traducido en el nuevo archivo
+    ofstream archivoTexto(nombreArchivoNuevo);
+    if (!archivoTexto.is_open()) {
+        cerr << "No se pudo crear el archivo: " << nombreArchivoNuevo << endl;
+        return;
+    }
+
+    archivoTexto << textoTraducido;
+    archivoTexto.close();
+
+    cout << "Archivo traducido y guardado en: " << nombreArchivoNuevo << endl;
 }
